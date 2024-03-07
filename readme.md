@@ -84,17 +84,56 @@ Changes to be committed:
         new file:   terraform.tfvars
         new file:   varibles.tf
 
-How to delete a file in git which is commited 
+**How to delete a file in git which is commited 
 
 A new file Creds.txt is used to store credentials 
 username : gautam
 Password : pass@123
 
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git add .
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git commit -m "adding readme.md & creds file to local"
+[main 7883ec1] adding readme.md & creds file to local
+ 2 files changed, 103 insertions(+)
+ create mode 100644 creds.txt
+ create mode 100644 readme.md
+
 gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git status
 On branch main
+nothing to commit, working tree clean
+
+**The file is commited ...first we need to remove the file from commit 
+
+**gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git rm --cached creds.txt
+rm 'creds.txt'
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git status 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    creds.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
         creds.txt
-        readme.md
 
-nothing added to commit but untracked files present (use "git add" to track)
+this will bring the file to untracked area ...
+
+Now you can right click on the file in VS code and delete it.
+
+
+By using the command git status you can check the status of file 
+
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        **deleted:    creds.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
