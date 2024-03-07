@@ -1,3 +1,0 @@
-A new file Creds.txt is used to store credentials 
-username : gautam
-Password : pass@123
