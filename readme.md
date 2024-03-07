@@ -152,14 +152,21 @@ nothing to commit, working tree clean
 
 ***Remote Repository (Github)***
 when you want to push your files to github repo ......below steps needs to be followed .....with errors 
+
 1 you need to create a github repo to (were you want to push your local files)
+
 2 In my case the repo name is gautam4921/terraform_git_aks
+
 3 Create a Personnel access token 
+
 4 Reference Url : https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
 5 When your PAT is ready copy it and keep it in a safe place 
 
 6 Copy the URL of Github repo and paste it in the below command
+
 7 I am using Https 
+
 8 https://github.com/gautam4921/terraform_git_aks.git
 
 9.git remote add origin https://github.com/gautam4921/terraform_git_aks.git
@@ -179,7 +186,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Solution Found on web :
 use below command :- 
 gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git fetch
-gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git push -f -u origin main
+##**gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git push -f -u origin main
 Username for 'https://github.com': gautam4921@gmail.com
 Password for 'https://gautam4921@gmail.com@github.com':
 Enumerating objects: 19, done.
