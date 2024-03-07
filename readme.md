@@ -137,3 +137,17 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
         modified:   readme.md
+
+
+why i did git add. .......coz i am adding notes to readme.md
+
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git add .
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git commit -m "removed the creds file and added notes to readme.md"
+[main 8ea7146] removed the creds file and added notes to readme.md
+ 1 file changed, 42 insertions(+), 3 deletions(-)
+
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ git status
+On branch main
+nothing to commit, working tree clean
+
+***Remote Repository (Github)***
