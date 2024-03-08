@@ -201,4 +201,41 @@ To https://github.com/gautam4921/terraform_git_aks.git
 branch 'main' set up to track 'origin/main'.
 
 *check in github repo for codes 
+##  Below are outputs and terraform state list 
+Outputs:
+
+acr_id = "/subscriptions/90f4dd64-b8a4-40a8-898f-a777acc25b9a/resourceGroups/aks_tf_rg/providers/Microsoft.ContainerRegistry/registries/aztfacr"
+acr_login_server = "aztfacr.azurecr.io"
+aks_fqdn = "az-tf-aks-haapx85d.hcp.eastus.azmk8s.io"
+aks_id = "/subscriptions/90f4dd64-b8a4-40a8-898f-a777acc25b9a/resourceGroups/aks_tf_rg/providers/Microsoft.ContainerService/managedClusters/az-tf-aks"
+aks_node_rg = "MC_aks_tf_rg_az-tf-aks_eastus"
+
+
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ terraform state list
+azurerm_container_registry.acr
+azurerm_kubernetes_cluster.aks
+azurerm_resource_group.aks-rg
+azurerm_role_assignment.role_acrpull
+local_file.kubeconfig
+
+
+**How to find Azure kubernetes latest version from command line 
+gautam@YG1010056LT:/mnt/d/terraform_nginx-app$ az aks get-versions --location eastus -o table
+The behavior of this command has been altered by the following extension: aks-preview
+KubernetesVersion    IsPreview    Upgrades
+-------------------  -----------  -----------------------
+1.29.0               True         None available
+1.28.5                            1.29.0
+1.28.3                            1.28.5, 1.29.0
+1.27.9                            1.28.3, 1.28.5
+1.27.7                            1.27.9, 1.28.3, 1.28.5
+1.26.12                           1.27.7, 1.27.9
+1.26.10                           1.26.12, 1.27.7, 1.27.9
+
+
+## Stop and start an Azure Kubernetes Service (AKS) cluster
+https://learn.microsoft.com/en-us/azure/aks/start-stop-cluster?tabs=azure-cli 
+
+## Manually scale the node count in an Azure Kubernetes Service (AKS) cluster
+https://learn.microsoft.com/en-us/azure/aks/scale-cluster?tabs=azure-cli#scale-user-node-pools-to-0
 
